@@ -1,0 +1,32 @@
+dataset_params:
+  size: 50000
+  num_steps: 50
+  vis_steps: 6
+  sigma_min: 0.002
+  sigma_max: 80.0
+  rho: 7.0
+  cfg: 4
+  stochastic: false
+  iter_start: 0
+  iter_end: 1000
+  save_path: "weights_and_dataset/dataset_50k.pt"
+  device: cuda
+  batch_size: 512
+
+ladd:
+  latents_path: "logs/latents_exp2/"
+  student_lr: 0.0001
+  discriminator_lr: 0.00005
+  adv_loss_weight: 0.1
+  distill_loss_weight: 1.0
+  batch_size: 128
+  num_workers: 4
+  prediction_type: ddpm
+  img_size: 64
+  device: cuda
+  num_steps: 50
+  train_steps: 20000
+  num_student_steps: 4
+  sigma_min: 0.002
+  sigma_max: 80.0
+  rho: 7.0
